@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine');
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: midnightblue;
+    box-sizing: border-box;
+    font-family: 'pooppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background: url("https://i.pinimg.com/736x/ee/00/2f/ee002f30abfc79dda62e74e1c1b89bb7.jpg");
+
+    background-size: cover;
+    background-position: absolute;
+}
+nav {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #070000;
+    width: 55px;
+    overflow: hidden;
+    transition: width 0.3s linear;
+    box-shadow: 0 20px 30px rgb(0, 0, 0, 0.1);
+}
+
+.logo {
+    text-align:center;
+    display: flex;
+    transition: all 0.5 ease;
+    margin: 10px 0 0 10px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;;
+}
+
+.logo span {
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+a {
+    position:center;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    display: table;
+    width: 300px;
+    padding: 30px;
+}
+
+i {
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item {
+    position: center;
+    top: 12px;
+    margin-left: 10px;
+}
+
+a:hover{
+ 
+  transition:all 0.5 ease;
+  background-color: blue;
+}
+
+nav:hover {
+    width: 250px;
+    transition: all o.5 ease;
+
+}
+

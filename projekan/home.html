@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DIGITAL CLOCK BY ANDHIKA</title>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="section">
+            <span class="time" id="hours">00</span>
+            <span class="title">hours</span>
+        </div>
+        <span class="colom">:</span>
+        <div class="section">
+            <span class="time" id="minutes">00</span>
+            <span class="title">minutes</span>
+        </div>
+        <span class="colom">:</span>
+        <div class="section">
+            <span class="time" id="seconds">00</span>
+            <span class="title">seconds</span>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    
+</body>
+</html>
+
+<style>
+    * {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: monospace;
+}
+body {
+    background: linear-gradient(45deg, #01010a, #5FD1F9);
+    width: 100%;
+    height: 100vh;
+    background-size: 300% 300%;
+    animation: animate 8s ease-in-out infinite;
+}
+@keyframes animate {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50;
+    }
+}
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.section {
+    color: rgb(252, 250, 250);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+.section .time {
+    background: rgba(225, 225, 255, 0.1);
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+}
+.section .title {
+    background:rgba(0, 0, 0, 0.25);
+    width:150px;
+    height: 60px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.colom {
+    font-size: 80px ;
+    color: white;
+}
+</style>
+
+<script>
+    const hours = document.getElementById('hours')
+const minutes = document.getElementById('minutes')
+const seconds = document.getElementById('seconds')
+
+setInterval(function() {
+    const date = new Date()
+
+    hours.textContent = date.getHours()
+    minutes.textContent = date.getMinutes()
+    seconds.textContent = date.getSeconds()
+})
+</script>
